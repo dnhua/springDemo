@@ -84,21 +84,3 @@ execution(* someclass.somemethod(..))
     * @AfterThrowing
     * Around
  
- 这里需要注意的是切面类和原始的类都要加载到容器里面
- ```java
-@Configuration
-@EnableAspectJAutoProxy
-@ComponentScan(basePackages = "Spring.demo4")
-public class TVConfiguration {
-    @Bean
-    public Amusement watchTV(){
-        return new WatchTV();
-    }
-
-    @Bean
-    public TV tv(){
-        return new TV();
-    }
-}
-```
-
